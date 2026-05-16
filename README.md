@@ -22,24 +22,24 @@ genai-hr-assistant/
 │   └── rag_hr_assistant.ipynb  # Main notebook with full pipeline
 ├── README.md
 ## requirements.txt
-javascriptgoogle-generativeai
-langchain
-langchain-community
-pypdf
-kaggle_secrets
+1. javascriptgoogle-generativeai
+2. langchain
+3. langchain-community
+4. pypdf
+5. kaggle_secrets
 
 ## Add your Google Gemini API Key
-This project uses Kaggle Secrets for key management. 
-In Kaggle Notebooks:Go to Add-ons > Secrets
-Add a secret named GEMINI_API_KEY with your API key from Google AI StudioLocally, you can use os.environ["GEMINI_API_KEY"] = "your_key"
+1. This project uses Kaggle Secrets for key management. 
+2. In Kaggle Notebooks:Go to Add-ons > Secrets
+3. Add a secret named GEMINI_API_KEY with your API key from Google AI StudioLocally, you can use os.environ["GEMINI_API_KEY"] = "your_key"
 ##  Add your documents
 Place your HR policy PDFs or text files in the data/ folder.
 ## Limitations:
-Keyword retrieval only: The current simple_search uses exact keyword matching. 
-It won’t match synonyms like "parental leave" vs "maternity leave".
-Limited by source data: The bot cannot answer questions not covered in your documents. 
-This is intentional to prevent hallucination.No conversation memory: Each query is independent. 
-Add chat history if you need follow-up questions.
+1. Keyword retrieval only: The current simple_search uses exact keyword matching. 
+2. It won’t match synonyms like "parental leave" vs "maternity leave".
+3. Limited by source data: The bot cannot answer questions not covered in your documents. 
+4. This is intentional to prevent hallucination.No conversation memory: Each query is independent. 
+5. Add chat history if you need follow-up questions.
 ## Next Steps:
 1. To improve the system:Replace simple_search with FAISS + HuggingFace embeddings for semantic search.
 2. Add more HR policy documents to expand coverage.Implement chat history for multi-turn conversations.
